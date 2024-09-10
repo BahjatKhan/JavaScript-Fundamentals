@@ -24,7 +24,21 @@ const restaurant = {
     return [this.mainMenu[mainIndex], this.starterMenu[startIndex]];
   },
 };
+/**Destructuring Object Practice */
+const {
+  openingHours,
+  categories,
+  name,
+  location: restaurantLocation,
+} = restaurant;
+console.log(openingHours, categories, name, restaurantLocation);
+// Setting a default value
+const { menu = ["Indian", "Russian", "Chinese"], starterMenu: starters = [] } =
+  restaurant;
+console.log(menu, starters);
+/** ------------------------------------------- */
 
+/**Destructuring Array Practice */
 const arr = [1, 2, 3];
 
 const [x, y, z] = arr;
@@ -52,3 +66,4 @@ console.log(c, d);
 
 const [w = 2, e = 4, r = 463] = [8];
 console.log(w, e, r);
+/** ------------------------------------------- */
